@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.register_blueprint(main_routes)
 app.secret_key = 'supersecretkey'
 app_path=app.root_path
+app.config["APP_ROOT"]=app_path
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
